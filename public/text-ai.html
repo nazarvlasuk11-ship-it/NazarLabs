@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Освітній вебсайт про штучний інтелект: інструменти для генерації тексту, зображень та відео, навчальні матеріали та блог."
+    />
+    <title>Генерація тексту</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="tools.html">⬆️ Назад до інструментів</a>
+    </nav>
+
+    <article>
+      <h2>Робота з текстом</h2>
+      <p>Цей підрозділ містить опис сервісів для тексту[cite: 39].</p>
+
+      <form action="#">
+        <fieldset>
+          <legend>Запит на демо-доступ</legend>
+
+          <label for="username">Ваше ім'я:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Введіть ім'я"
+          /><br /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" /><br /><br />
+
+          <label for="message">Опишіть вашу задачу:</label><br />
+          <textarea id="message" name="message" rows="5" cols="30"></textarea
+          ><br /><br />
+
+          <label>Оберіть інструмент:</label>
+          <select name="tool">
+            <option value="gpt">ChatGPT</option>
+            <option value="claude">Claude</option></select
+          ><br /><br />
+
+          <button type="submit">Надіслати запит</button>
+          <input type="reset" value="Очистити форму" />
+        </fieldset>
+      </form>
+    </article>
+  </body>
+</html>

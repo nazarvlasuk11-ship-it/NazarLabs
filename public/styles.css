@@ -1,0 +1,1005 @@
+/* =========================================
+   БАЗОВІ НАЛАШТУВАННЯ ТА ЗМІННІ КОЛЬОРІВ
+   ========================================= */
+:root {
+  --bg-color: #0f172a; /* Глибокий темний фон */
+  --text-color: #f8fafc; /* Світлий текст */
+  --primary-color: #3b82f6; /* Неоновий синій */
+  --accent-color: #8b5cf6; /* Неоновий фіолетовий */
+  --card-bg: #1e293b; /* Колір блоків/карток */
+  --border-color: #334155; /* Колір рамок */
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* =========================================
+   ШАПКА (HEADER)
+   ========================================= */
+header {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* =========================================
+   НАВІГАЦІЯ (NAV)
+   ========================================= */
+nav {
+  background: rgba(15, 23, 42, 0.95);
+  padding: 15px 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid var(--primary-color);
+  backdrop-filter: blur(10px); /* Ефект розмиття фону */
+}
+
+nav p {
+  margin: 0 0 10px 0;
+  color: #94a3b8;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+nav a:hover {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   ОСНОВНИЙ КОНТЕНТ (MAIN, SECTION, ARTICLE)
+   ========================================= */
+main,
+article,
+section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px;
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+h2 {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+h3 {
+  color: var(--accent-color);
+}
+
+/* =========================================
+   МЕДІА (ФОТО, ВІДЕО, АУДІО)
+   ========================================= */
+video,
+audio,
+img,
+iframe {
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  display: block;
+}
+
+figure {
+  margin: 20px 0;
+  text-align: center;
+}
+
+figcaption {
+  font-style: italic;
+  color: #94a3b8;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* =========================================
+   ТАБЛИЦІ (TABLE)
+   ========================================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  background: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden; /* Щоб кути були закруглені */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+th,
+td {
+  padding: 15px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background-color: var(--primary-color);
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: background 0.3s;
+}
+
+caption {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #cbd5e1;
+}
+
+/* =========================================
+   ФОРМИ (FORM, INPUT, SELECT, BUTTON)
+   ========================================= */
+fieldset {
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: bold;
+  color: var(--primary-color);
+  padding: 0 15px;
+  font-size: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--bg-color);
+  color: white;
+  margin-bottom: 20px;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  margin-right: 10px;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.6);
+}
+
+/* =========================================
+   СПЕЦИФІЧНІ ЕЛЕМЕНТИ ТА ТЕКСТ
+   ========================================= */
+details {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+  margin-bottom: 20px;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #e2e8f0;
+}
+
+meter,
+progress {
+  width: 100%;
+  height: 25px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+pre {
+  background: #000;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-x: auto;
+  border-left: 4px solid #10b981; /* Зелений акцент для коду */
+}
+
+code {
+  font-family: "Consolas", "Courier New", monospace;
+  color: #10b981;
+  font-size: 1.05rem;
+}
+
+blockquote {
+  border-left: 5px solid var(--accent-color);
+  margin: 25px 0;
+  padding: 15px 25px;
+  background: rgba(139, 92, 246, 0.1);
+  font-style: italic;
+  border-radius: 0 12px 12px 0;
+}
+
+cite {
+  display: block;
+  text-align: right;
+  color: #94a3b8;
+  font-weight: bold;
+}
+
+mark {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+address {
+  font-style: normal;
+  line-height: 1.8;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px dashed var(--border-color);
+}
+
+/* =========================================
+   ФУТЕР (FOOTER)
+   ========================================= */
+footer {
+  text-align: center;
+  padding: 25px 20px;
+  background: #0f172a;
+  border-top: 1px solid var(--border-color);
+  margin-top: 50px;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--border-color);
+  margin: 40px 0;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background: #fafafa;
+  margin-bottom: 15px;
+}
+
+.message {
+  background: #e9e9e9;
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+}
+
+.message:last-child {
+  margin-bottom: 0;
+}
+
+.message-header {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.message-text {
+  color: #000;
+  font-size: 15px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input textarea {
+  flex: 1;
+  resize: none;
+  height: 60px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.chat-input button {
+  width: 100px;
+  border: none;
+  border-radius: 8px;
+  background: #007bff;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background: #0056b3;
+}
+
+.empty-chat {
+  text-align: center;
+  color: #999;
+  margin-top: 200px;
+}
+
+/* ---------------- BLOG ---------------- */
+
+.blog-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.blog-textarea {
+  width: 100%;
+  height: 150px;
+  resize: vertical;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.publish-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+.publish-button:hover {
+  background: #218838;
+}
+
+.section {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.section h2 {
+  margin-top: 0;
+}
+
+.error-text {
+  color: #c0392b;
+  font-size: 0.9em;
+}
+
+.success-text {
+  color: #27ae60;
+  font-size: 0.9em;
+}
+
+.profile-info p {
+  margin: 4px 0;
+}
+
+.profile-info {
+  color: #000;
+}
+
+.logout-button {
+  margin-top: 12px;
+  background-color: #95a5a6;
+}
+
+.logout-button:hover {
+  background-color: #7f8c8d;
+}
+
+.parallax {
+  background-image: url("paralax.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* =========================================
+   ADAPTIVE / RESPONSIVE DESIGN
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  header {
+    padding: 35px 20px;
+  }
+
+  header h1 {
+    font-size: 2.3rem;
+  }
+
+  header p {
+    font-size: 1.05rem;
+  }
+
+  nav {
+    padding: 12px 15px;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+
+  nav a {
+    padding: 9px 15px;
+  }
+
+  main,
+  article,
+  section {
+    width: calc(100% - 30px);
+    margin: 30px auto;
+    padding: 30px;
+  }
+
+  fieldset {
+    padding: 20px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .chat-container {
+    height: 450px;
+  }
+}
+
+/* =========================================
+   MOBILE
+   до 600px
+   ========================================= */
+
+@media (max-width: 600px) {
+  /* -------------------------
+     HEADER
+     ------------------------- */
+
+  header {
+    padding: 30px 15px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+
+  header p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+  /* -------------------------
+     NAVIGATION
+     ------------------------- */
+
+  nav {
+    position: sticky;
+    top: 0;
+
+    padding: 10px;
+
+    backdrop-filter: blur(10px);
+  }
+
+  nav p {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  nav ul {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    width: 100%;
+  }
+
+  nav li {
+    width: 100%;
+  }
+
+  nav a {
+    display: block;
+
+    width: 100%;
+
+    padding: 10px 5px;
+
+    font-size: 0.9rem;
+
+    text-align: center;
+
+    margin: 0;
+  }
+
+  /* -------------------------
+     MAIN CONTENT
+     ------------------------- */
+
+  main,
+  article,
+  section {
+    width: calc(100% - 20px);
+
+    margin: 20px auto;
+
+    padding: 20px;
+
+    border-radius: 12px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+
+    line-height: 1.3;
+
+    padding-bottom: 8px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  /* -------------------------
+     MEDIA
+     ------------------------- */
+
+  video,
+  audio,
+  iframe,
+  img {
+    width: 100%;
+
+    max-width: 100%;
+
+    margin: 15px 0;
+  }
+
+  video {
+    height: auto;
+  }
+
+  /* -------------------------
+     FIGURE
+     ------------------------- */
+
+  figure {
+    margin: 15px 0;
+  }
+
+  /* -------------------------
+     TABLE
+     ------------------------- */
+
+  table {
+    width: 100%;
+
+    display: block;
+
+    overflow-x: auto;
+
+    font-size: 0.85rem;
+  }
+
+  th,
+  td {
+    padding: 10px 12px;
+  }
+
+  /* -------------------------
+     FORMS
+     ------------------------- */
+
+  fieldset {
+    padding: 15px;
+
+    margin-bottom: 15px;
+  }
+
+  legend {
+    font-size: 1rem;
+
+    padding: 0 8px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  select {
+    width: 100%;
+
+    padding: 11px;
+
+    font-size: 16px;
+  }
+
+  /* -------------------------
+     BUTTONS
+     ------------------------- */
+
+  button,
+  input[type="submit"],
+  input[type="reset"] {
+    width: 100%;
+
+    margin: 5px 0;
+
+    padding: 12px;
+
+    font-size: 1rem;
+  }
+
+  /* -------------------------
+     DETAILS
+     ------------------------- */
+
+  details {
+    padding: 12px;
+
+    margin-bottom: 15px;
+  }
+
+  summary {
+    font-size: 1rem;
+  }
+
+  /* -------------------------
+     CODE
+     ------------------------- */
+
+  pre {
+    padding: 15px;
+
+    font-size: 0.8rem;
+
+    overflow-x: auto;
+  }
+
+  code {
+    font-size: 0.85rem;
+  }
+
+  /* -------------------------
+     BLOCKQUOTE
+     ------------------------- */
+
+  blockquote {
+    margin: 20px 0;
+
+    padding: 12px 15px;
+
+    font-size: 0.95rem;
+  }
+
+  /* -------------------------
+     FOOTER
+     ------------------------- */
+
+  footer {
+    padding: 20px 15px;
+
+    margin-top: 30px;
+
+    font-size: 0.8rem;
+  }
+
+  hr {
+    margin: 25px 0;
+  }
+
+  /* -------------------------
+     CHAT
+     ------------------------- */
+
+  .chat-container {
+    height: 500px;
+  }
+
+  .messages {
+    padding: 10px;
+  }
+
+  .message {
+    padding: 10px;
+
+    margin-bottom: 8px;
+  }
+
+  .message-text {
+    font-size: 14px;
+  }
+
+  .chat-input {
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .chat-input textarea {
+    width: 100%;
+
+    height: 80px;
+  }
+
+  .chat-input button {
+    width: 100%;
+
+    height: 45px;
+  }
+
+  .empty-chat {
+    margin-top: 180px;
+  }
+
+  /* -------------------------
+     BLOG
+     ------------------------- */
+
+  .blog-input,
+  .blog-textarea {
+    width: 100%;
+
+    font-size: 16px;
+  }
+
+  .blog-textarea {
+    height: 130px;
+  }
+
+  .publish-button {
+    width: 100%;
+
+    margin-top: 10px;
+  }
+
+  /* -------------------------
+     PROFILE
+     ------------------------- */
+
+  .profile-info {
+    width: 100%;
+
+    overflow-wrap: break-word;
+  }
+
+  .logout-button {
+    width: 100%;
+  }
+
+  /* -------------------------
+     PARALLAX
+     ------------------------- */
+
+  .parallax {
+    background-attachment: scroll;
+
+    background-position: center;
+
+    background-size: cover;
+  }
+}
+
+/* =========================================
+   VERY SMALL PHONES
+   до 400px
+   ========================================= */
+
+@media (max-width: 400px) {
+  header {
+    padding: 25px 12px;
+  }
+
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  nav {
+    padding: 8px;
+  }
+
+  nav ul {
+    grid-template-columns: 1fr;
+  }
+
+  nav a {
+    padding: 9px;
+
+    font-size: 0.9rem;
+  }
+
+  main,
+  article,
+  section {
+    width: calc(100% - 12px);
+
+    padding: 15px;
+
+    margin: 15px auto;
+
+    border-radius: 10px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  footer {
+    padding: 15px 10px;
+  }
+}
+
+/* =========================================
+   TOUCH DEVICES
+   ========================================= */
+
+@media (hover: none) and (pointer: coarse) {
+  nav a:hover {
+    transform: none;
+
+    box-shadow: none;
+  }
+
+  button:hover,
+  input[type="submit"]:hover,
+  input[type="reset"]:hover {
+    transform: none;
+
+    box-shadow: none;
+  }
+
+  nav a:active {
+    background: var(--primary-color);
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+}

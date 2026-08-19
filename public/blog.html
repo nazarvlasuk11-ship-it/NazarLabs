@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Освітній вебсайт про штучний інтелект: інструменти для генерації тексту, зображень та відео, навчальні матеріали та блог."
+    />
+    <title>Блог</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="blog.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">🔙 Повернутися на Головну сторінку</a><br /><br />
+      <a href="profile.html">Профіль користувача</a>
+    </nav>
+
+    <main>
+      <section class="section">
+        <h2>Create Blog Post</h2>
+
+        <input
+          id="blogTitle"
+          class="blog-input"
+          type="text"
+          placeholder="Blog post title"
+        />
+
+        <textarea
+          id="blogContent"
+          class="blog-textarea"
+          placeholder="Blog post content..."
+        ></textarea>
+
+        <button class="publish-button" onclick="publishPost()">Publish</button>
+      </section>
+
+      <section class="section">
+        <h2>Main Chat</h2>
+
+        <div class="chat-container">
+          <div id="messages" class="messages"></div>
+
+          <div class="chat-input">
+            <textarea
+              id="messageInput"
+              placeholder="Write a message to all users..."
+            ></textarea>
+
+            <button onclick="sendMessage()">Send</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
